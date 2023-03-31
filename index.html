@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Text Fading Effect</title>
+    <title>Fading Text Example</title>
     <style>
-      /* Style for the body */
-      body {
-        background-color: black;
-      }
-      /* Style for the text */
       #fading-text {
         font-size: 48px;
-        text-align: left;
         color: white;
-        animation: fade 30y linear forwards;
+        text-align: left;
+        background-color: black;
+        padding: 20px;
+        animation: fade-out var(--fade-duration) linear forwards;
       }
-      /* Keyframes for the fading animation */
-      @keyframes fade {
-        0% {
+
+      @keyframes fade-out {
+        from {
           opacity: 1;
         }
-        100% {
+        to {
           opacity: 0;
         }
       }
@@ -27,10 +24,24 @@
   </head>
   <body>
     <div id="fading-text">
-      Hi! <br>
-      This is my website. <br>
-      This text is fading slowly, starting on Mar 31, 2023. <br>
-      When it's gone I'll probably be gone too.
+        Hi! <br>
+        This is my website. <br>
+        This text is fading slowly, starting on Mar 31, 2023. <br>
+        When it's gone I'll probably be gone too.   
     </div>
+
+    <script>
+      // Set the date when the text should disappear
+      var disappearingDate = new Date("2053-03-31");
+
+      // Calculate the time remaining between now and the disappearing date
+      var timeRemaining = disappearingDate.getTime() - new Date().getTime();
+
+      // Calculate the duration of the fade animation based on the remaining time
+      var fadeDuration = timeRemaining / 1000;
+
+      // Set the animation duration as a CSS variable
+      document.documentElement.style.setProperty('--fade-duration', fadeDuration + 's');
+    </script>
   </body>
 </html>
