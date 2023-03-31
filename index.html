@@ -1,1 +1,36 @@
-My Github pages hosted website
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Text Fading Effect</title>
+    <style>
+      /* Style for the body */
+      body {
+        background-color: black;
+      }
+      /* Style for the text */
+      #fading-text {
+        font-size: 48px;
+        text-align: left;
+        color: white;
+        animation: fade 30y linear forwards;
+      }
+      /* Keyframes for the fading animation */
+      @keyframes fade {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="fading-text">
+      Hi! <br>
+      This is my website. <br>
+      This text is fading slowly, starting on Mar 31, 2023. <br>
+      When it's gone I'll probably be gone too.
+    </div>
+  </body>
+</html>
