@@ -1,49 +1,23 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>frankie online</title>
-    <style>
-      #fading-text {
-        font-size: 48px;
-        font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;  
-        color: white;
-        text-align: left;
-        background-color: black;
-        padding: 20px;
-        animation: fade-out var(--fade-duration) linear forwards;
-      }
-
-      @keyframes fade-out {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="fading-text">
-        Hi! <br>
-        This is my website. <br>
-        This text is fading slowly, starting on Mar 31, 2023. <br>
-        Dissapearing sometime after 2050? <br>
-        When it's gone I'll probably be gone too.   
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="glitch-container">
+        <div class="background-box"></div>
+        <div class="loading-bar"></div>
+        <div class="clock-icon">&#128339;</div>
+        <div class="fading-text">
+            Hi! <br>
+            This is my website. <br>
+            This text is fading slowly, starting on Mar 31, 2023. <br>
+            Disappearing sometime after 2050? <br>
+            When it's gone, I'll probably be gone too.
+        </div>
     </div>
-
-    <script>
-      // Set the date when the text should disappear
-      var disappearingDate = new Date("2063-03-31");
-
-      // Calculate the time remaining between now and the disappearing date
-      var timeRemaining = disappearingDate.getTime() - new Date().getTime();
-
-      // Calculate the duration of the fade animation based on the remaining time
-      var fadeDuration = timeRemaining / 1000;
-
-      // Set the animation duration as a CSS variable
-      document.documentElement.style.setProperty('--fade-duration', fadeDuration + 's');
-    </script>
-  </body>
+</body>
 </html>
