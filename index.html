@@ -1,49 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>frankie online</title>
-    <style>
-      #fading-text {
-        font-size: 48px;
-        font-family: Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Arial,sans-serif;  
-        color: white;
-        text-align: left;
-        background-color: black;
-        padding: 20px;
-        animation: fade-out var(--fade-duration) linear forwards;
-      }
+    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-      @keyframes fade-out {
-        from {
-          opacity: 1;
-        }
-        to {
-          opacity: 0;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="fading-text">
-        Hi! <br>
-        This is my website. <br>
-        This text is fading slowly, starting on Mar 31, 2023. <br>
-        Disappearing sometime after 2050? <br>
-        When it's gone I'll probably be gone too.   
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="fading-text">
+                Hello<span class="flicker">.</span> <br>
+                This is my website<span class="flicker">.</span> <br>
+                This text is fading slowly, starting on Mar 31, 2023<span class="flicker">.</span> <br>
+                Disappearing sometime after 2050<span class="flicker">?</span> <br>
+                When it's gone, I'll probably be gone too<span class="flicker">.</span>
+            </div>
+        </div>
     </div>
-
-    <script>
-      // Set the date when the text should disappear (30 years from today)
-      var disappearingDate = new Date("2053-07-27");
-
-      // Calculate the time remaining between now and the disappearing date
-      var timeRemaining = disappearingDate.getTime() - new Date().getTime();
-
-      // Calculate the duration of the fade animation based on the remaining time
-      var fadeDuration = timeRemaining / 1000;
-
-      // Set the animation duration as a CSS variable
-      document.documentElement.style.setProperty('--fade-duration', fadeDuration + 's');
-    </script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
