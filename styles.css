@@ -2,29 +2,3 @@ body {
     margin: 0;
     overflow: hidden;
 }
-
-.glitch-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.background-box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(200, 50, 10, 0.9);
-    animation: glitch 2s infinite;
-}
-
-.fading-text {
-    font-size: 24px;
-    font-family: Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-    color: white;
-    text-align: left;
-    padding: 20px;
-    animation: fade-out var(--fade-duration) linear forwards;
-}
