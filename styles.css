@@ -1,4 +1,40 @@
 body {
     margin: 0;
     overflow: hidden;
+    background-color: #fff; /* Set the background color of the site to white */
+    font-family: 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    position: relative;
+}
+
+.box {
+    background-color: #000; /* Set the background color of the text box to black */
+    padding: 20px;
+    border-radius: 0px;
+    animation: fade-out var(--fade-duration) linear; /* Set the fade-out animation duration */
+    position: relative;
+    overflow: hidden;
+}
+
+.fading-text {
+    font-size: 24px;
+    text-align: left;
+    line-height: 1.6;
+}
+
+.flicker {
+    position: relative;
+}
+
+.flicker-on {
+    opacity: 0.1;
 }
