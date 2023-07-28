@@ -9,8 +9,6 @@
 <body>
     <div class="glitch-container">
         <div class="background-box"></div>
-        <div class="loading-bar"></div>
-        <div class="clock-icon">&#128339;</div>
         <div class="fading-text">
             Hi! <br>
             This is my website. <br>
@@ -18,6 +16,23 @@
             Disappearing sometime after 2050? <br>
             When it's gone, I'll probably be gone too.
         </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar"></div>
+        </div>
     </div>
+
+    <script>
+        // Set the date when the text should disappear (30 years from today)
+        var disappearingDate = new Date("2053-07-27");
+
+        // Calculate the time remaining between now and the disappearing date
+        var timeRemaining = disappearingDate.getTime() - new Date().getTime();
+
+        // Calculate the duration of the fade animation based on the remaining time
+        var fadeDuration = timeRemaining / 1000;
+
+        // Set the animation duration as a CSS variable
+        document.documentElement.style.setProperty('--fade-duration', fadeDuration + 's');
+    </script>
 </body>
 </html>
